@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 // --- CONFIGURAÇÃO CHAVE ---
 // Defina a data e hora exata de início do relacionamento.
@@ -11,7 +11,6 @@ const MS_SEGUNDO = 1000;
 const MS_MINUTO = MS_SEGUNDO * 60;
 const MS_HORA = MS_MINUTO * 60;
 const MS_DIA = MS_HORA * 24;
-
 
 // Função auxiliar para calcular a diferença de tempo e formatar
 function calcularDuracao() {
@@ -63,15 +62,14 @@ export default function RelacionamentoContador() {
   }, []); // O array vazio [] garante que o useEffect rode APENAS na montagem
 
   return (
-    <div style={{ textAlign: 'center', fontFamily: 'Arial, sans-serif' }}>
+    <div style={{ textAlign: "center", fontFamily: "Arial, sans-serif" }}>
       <h1>💖 Eu te amo há... 💖</h1>
-      
+
       {/* Exibição formatada dos valores */}
-      <div style={{ fontSize: '2em', fontWeight: 'bold', margin: '20px 0' }}>
-        <span>{duracao.dias}</span> dias,{' '}
-        <span>{duracao.horas}</span> horas,{' '}
-        <span>{duracao.minutos}</span> minutos e{' '}
-        <span>{duracao.segundos}</span> segundos!
+      <div style={{ fontSize: "2em", fontWeight: "bold", margin: "20px 0" }}>
+        <span>{duracao.dias}</span> dias, <span>{duracao.horas}</span> horas,{" "}
+        <span>{duracao.minutos}</span> minutos e <span>{duracao.segundos}</span>{" "}
+        segundos!
       </div>
     </div>
   );
